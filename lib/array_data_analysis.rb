@@ -17,44 +17,18 @@ class ArrayDataAnalysis
   end
 
   def day_of_lowest_temperature
-    low_temp_array = []
-    ordered_low_temps = []
-    answer = 0
-    @data.each do |date|
-      low_temp_array << date[2]
-      ordered_low_temps = low_temp_array.sort
-    end
-
-    @data.each do |date|
-      if date[2] == ordered_low_temps[0]
-        answer += date[0]
-      end
-    end
-    answer
+    new_data_array = @data.sort_by{ |day| day[2]}
+    new_data_array[0][0]
   end
 
   def day_of_highest_temperature
-    high_temp_array = []
-    ordered_high_temps = []
-    answer = 0
-    @data.each do |date|
-      high_temp_array << date[1]
-      ordered_high_temps = high_temp_array.sort
-    end
-
-    @data.each do |date|
-      if date[1] == ordered_high_temps[-1]
-        answer += date[0]
-      end
-    end
-    answer
+    new_data_array = @data.sort_by{ |day| day[1]}
+    new_data_array[-1][0]
   end
 
   def average_temperatures
     average_temp_array = []
-    @data.each do |date|
-      average_temp_array << (date[1] + date[2]) * 0.5
-    end
+    @data.each { |date| average_temp_array << (date[1] + date[2]) * 0.5}
     average_temp_array
   end
 
