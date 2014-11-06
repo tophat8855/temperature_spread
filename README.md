@@ -1,7 +1,6 @@
-# Ruby Exercise Template
+# Ruby Exercise Temperature Spread
 
-This is a blank project you can use to craft your own Ruby projects for exercises
-and assessments.
+This is the gSchool assessment, finished. Hope I did it correctly. 
 
 #### Gems
 
