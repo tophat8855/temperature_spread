@@ -17,12 +17,12 @@ class ClassDataAnalysis
 
   def day_of_lowest_temperature
     new_data_array = @data.sort_by{ |day| day.low}
-    new_data_array[0].day
+    new_data_array.first.day
   end
 
   def day_of_highest_temperature
     new_data_array = @data.sort_by!{ |day| day.high}
-    new_data_array[-1].day
+    new_data_array.last.day
   end
 
   def average_temperatures
