@@ -26,9 +26,7 @@ class ClassDataAnalysis
   end
 
   def average_temperatures
-    average_temp_array = []
-    @data.each {|date| average_temp_array << (date.high + date.low) * 0.5}
-    average_temp_array
+    @data.map {|date| date.average}
   end
 
 end
